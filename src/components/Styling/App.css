@@ -1,0 +1,399 @@
+/* Global Styles */
+/*this css is all about homepage*/
+
+/************ Custom Font ************/
+@font-face {
+  font-family: Centra;
+  src: url("../../assets/font/CentraNo2-Bold.ttf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: Centra;
+  src: url("../../assets/font/CentraNo2-Medium.ttf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: Centra;
+  src: url("../../assets/font/CentraNo2-Book.ttf");
+  font-weight: 400;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: white;
+  color: #333;
+  line-height: 1.6;
+  font-family: "Centra" !important;
+}
+a {
+  font-family: "Centra" !important;
+}
+
+h1,
+h2,
+h3 {
+  color: #2d3142;
+  font-family: "Centra" !important;
+}
+
+.container {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 0px;
+}
+
+/*image carousel*/
+.carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%; /* Full width */
+  height: 450px; /* 20% of page height */
+  overflow: hidden;
+}
+
+.carousel-images {
+  display: flex;
+  width: 100%;
+  height: 100%;
+
+  transition: opacity 0.5s ease-in-out; /* Fade effect for transitions */
+}
+
+.carousel-image {
+  flex: 1; /* Allow images to take equal space */
+  opacity: 0.8; /* Slight opacity for blending */
+  transition: transform 0.5s ease, opacity 0.5s ease; /* Smooth transition */
+}
+
+.carousel-image img {
+  width: 100%; /* Image covers 100% of the container width */
+  height: 100%; /* Image covers 100% of the container height */
+  object-fit: cover; /* Ensure image maintains aspect ratio */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-image.fade {
+  opacity: 1; /* Full opacity for the visible images */
+}
+
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 50px;
+  color: white;
+  padding: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease-in-out;
+}
+
+.left-arrow {
+  left: 10px;
+}
+
+.right-arrow {
+  right: 10px;
+}
+
+/* Show arrows on hover */
+.carousel-container:hover .carousel-arrow {
+  opacity: 1; /* Arrows visible when hovered */
+}
+
+/* Contact Section */
+#footer {
+  padding: 20px 20px;
+  background: #272727;
+  color: white !important;
+  text-align: left;
+}
+
+#footer h3 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+  animation: fadeIn 1.5s ease;
+}
+#footer p,
+a {
+  font-size: 1rem;
+  animation: fadeIn 1.5s ease;
+  font-weight: 500;
+  font-family: sans-serif;
+
+  text-decoration: none;
+}
+
+.contact-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 15px 35px;
+  background-color: #f87171;
+  color: white;
+  border-radius: 50px;
+  font-size: 1.3rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.contact-btn:hover {
+  background-color: #9d0208;
+  transform: translateY(-5px);
+}
+.footer-div {
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space between sections */
+  align-items: flex-start; /* Align items at the start */
+  margin-top: 20px; /* Add some space above */
+}
+
+.about-footer-section,
+.contact-info,
+.gallery-section {
+  padding: 20px;
+  flex: 1; /* Allow sections to grow equally */
+  margin-right: 10px; /* Add margin for spacing */
+}
+
+.gallery-container {
+  display: flex; /* Use flexbox for the gallery */
+  flex-wrap: wrap; /* Wrap images to new lines if necessary */
+  justify-content: flex-start; /* Center images */
+
+  gap: 10px; /* Space between images */
+}
+
+.gallery-container img {
+  width: calc(33.33% - 10px);
+  max-width: none; /* Max width for images */
+  height: 80px; /* Maintain aspect ratio */
+  border-radius: 8px; /* Rounded corners */
+}
+
+/*Enlarged gallery Images*/
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure it's on top */
+}
+
+.enlarged-image {
+  max-width: 70%;
+  max-height: 70%;
+}
+
+.arrow {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.left {
+  left: 10px;
+}
+
+.right {
+  right: 10px;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* Copyright footer */
+.copyright {
+  background-color: #1b1b1b;
+  color: white;
+  font-size: 1rem;
+  text-align: center;
+  padding: 18px;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromTop {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Hover Effects on Package Link */
+.package-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.package-link:hover .package {
+  transform: translateY(-10px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Media Queries */
+
+/* For Tablets (Max Width 1024px) */
+@media (max-width: 1024px) {
+  /* Footer */
+  .footer-div {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-footer-section,
+  .contact-info,
+  .gallery-section {
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  /* Gallery Section */
+  .gallery-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+}
+
+/* For Mobile Phones (Max Width 768px) */
+@media (max-width: 768px) {
+  /* Footer */
+  .footer-div {
+    margin-top: 0;
+    flex-direction: column;
+    align-items: flex-start; /* Align all content to the left */
+    padding: 0px;
+  }
+
+  .about-footer-section,
+  .contact-info,
+  .gallery-section {
+    max-width: 100%;
+    text-align: left; /* Ensure left alignment */
+    margin-bottom: 20px;
+  }
+
+  /* Gallery Section */
+  .gallery-container {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .enlarged-image {
+    max-width: 90%;
+    max-height: 50%;
+  }
+}
+
+/* For Smaller Mobile Phones (Max Width 480px) */
+@media (max-width: 550px) {
+  /* Footer */
+  #footer {
+    padding: 0px;
+  }
+  .footer-div {
+    padding-left: 5px;
+    align-items: flex-start; /* Align all content to the left */
+    margin-left: -10px;
+  }
+
+  .about-footer-section,
+  .contact-info,
+  .gallery-section {
+    max-width: 100%;
+    text-align: left; /* Ensure left alignment */
+    margin-bottom: 0px;
+  }
+  .about-footer-section h3,
+  .contact-info h3,
+  .gallery-section h3 {
+    font-size: 22px !important;
+    margin-bottom: 10px !important;
+  }
+
+  .contact-btn {
+    font-size: 1rem;
+    padding: 12px 25px;
+  }
+
+  .about-footer-heading,
+  .fade-in,
+  .gallery-heading {
+    text-align: left; /* Ensure headings are also left aligned */
+  }
+
+  /* Gallery Section */
+  .gallery-container {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+
+  /*Carousel*/
+  .carousel-container {
+    height: 30vh;
+  }
+
+  .carousel-arrow {
+    font-size: 10px;
+  }
+}
