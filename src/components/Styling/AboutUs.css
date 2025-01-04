@@ -10,6 +10,7 @@
   flex: 1;
   display: grid;
   box-shadow: -2px -5px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 5px;
 }
 .about-images img {
   max-width: 100%;
@@ -28,7 +29,7 @@
 /**/
 .about-section {
   padding: 2em;
-  background: #f8f9fa;
+  background: #f0f0f0;
   text-align: center;
 }
 
@@ -66,7 +67,7 @@
 
 .about-icon {
   font-size: 2em;
-  color: orangered;
+  color: #ef4444;
   margin-bottom: 0.5em;
 }
 @media (max-width: 1024px) {

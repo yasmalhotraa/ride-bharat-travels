@@ -1,140 +1,271 @@
-/* Navbar Styling */
-.navbar h2 {
-    position: absolute;
-    left: 20px;
-    margin: 0;
-    font-size: 1.5rem;
-    transition: opacity 0.4s ease;
-  }
+.tour-heading {
+  transition: margin-top 0.3s ease;
+}
+
+.tour-heading.menu-open {
+  margin-top: 90px;
+}
+
+/* Main Tour Package Container */
+.tour-package {
+  background: linear-gradient(to right, #f7f9fc, #eaf0f5);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: flex-start;
+  padding: 20px 80px;
+  gap: 50px;
+}
+
+.tour-package.reverse {
+  flex-direction: row-reverse; /* For alternating layouts */
+}
+
+/* Heading and Content Styles */
+.tour-heading {
+  font-size: 1.3rem;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  font-family: monospace;
+  padding: 20px;
+  line-height: 3rem;
+  letter-spacing: -0.05em;
+  word-spacing: 0.3em;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
+  font-family: "Montserrat", sans-serif;
+  width: 100%;
+  height: 40vh;
+}
+.tour-heading h1 {
+  color: #ffffff;
+}
+.delhi-bg-image {
+  background: linear-gradient(rgba(52, 50, 50, 0.4), rgba(42, 42, 41, 0.8)),
+    url("../../assets/Images/LotusTemple.jpg"),
+    url("../../assets/Images/IndiaGate.jpg");
+  background-position: center, left center, right center;
+  background-size: cover, 50% 100%, 50% 100%;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+}
+.agra-bg-image {
+  background: linear-gradient(rgba(20, 20, 20, 0.6), rgba(42, 42, 42, 0.8)),
+    url("../../assets/Images/Tajmahal.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.tour-package .content {
+  flex: 1.5;
+}
+
+.cab-info-table {
+  width: 100%; /* Ensures the table spans the full width of its container */
+  margin-bottom: 20px; /* Adds space below the table */
+  border-collapse: collapse; /* Removes spacing between table cells */
+  font-family: Arial, sans-serif; /* Ensures consistent font styling */
+  font-size: 16px; /* Increases readability */
+}
+
+.cab-info-table th,
+.cab-info-table td {
+  border: 1px solid #ccc; /* Adds subtle borders for a cleaner look */
+  text-align: center; /* Centers the text */
+  padding: 12px; /* Provides sufficient spacing inside the cells */
+}
+
+.cab-info-table th {
+  background: linear-gradient(
+    90deg,
+    #2a437b,
+    #14213d,
+    #2a437b
+  ); /* Adds a gradient background */
+  color: white; /* White text for better contrast */
+  text-transform: uppercase; /* Makes headers stand out */
+  font-weight: bold; /* Highlights header text */
+}
+
+.cab-info-table tr:nth-child(even) {
+  background-color: #f9f9f9; /* Light background for alternate rows */
+}
+
+.cab-info-table tr:nth-child(odd) {
+  background-color: #ffffff; /* White background for odd rows */
+}
+
+.cab-info-table tr:hover {
+  background-color: #d8deeb; /* Subtle highlight on hover for better user interaction */
+}
+
+.cab-info-table td {
+  word-wrap: break-word; /* Ensures text doesn't overflow the cells */
+}
+
+.cab-info-table caption {
+  caption-side: top; /* Positions the caption above the table */
+  text-align: left; /* Aligns the caption to the left */
+  font-size: 18px; /* Makes the caption more prominent */
+  font-weight: bold; /* Highlights the caption */
+  margin-bottom: 10px; /* Adds spacing between caption and table */
+  color: #333; /* Sets a neutral color for the caption */
+}
+.booking-button {
+  padding: 10px 15px;
+  border: none;
+  background-color: #2a437b;
+  color: white;
+  border-radius: 20px;
+}
+
+/* Add this to your Tour.css file */
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  height: 350px; /* Adjust this as needed */
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 2s ease-in-out; /* Smooth fade transition */
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 1s ease-in-out; /* Make sure the image also has smooth transition */
+}
+
+.tour-package .content h2 {
+  font-size: 1.8rem;
+  color: #1e375b; /* Unified color for subheadings */
+  margin-bottom: 10px;
+}
+
+.tour-package .content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #4a5d73; /* Matches homepage text color */
+}
+
+.tour-package .content ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.tour-package .content ul li {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  background: #eaf0f5;
+  padding: 10px;
+  text-align: left;
+  border-left: 5px solid #1e375b;
+  border-radius: 5px;
+  color: #4a5d73; /* Consistent text color */
+}
+
+/* Image Styling */
+.tour-package .image-container {
+  flex: 1;
+}
+
+.tour-package img {
+  width: 100%;
+  height: 400px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.timings {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+.timeandlocation-icons {
+  margin-top: 5px;
+}
+
+/* Back Button Styling */
+.back-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #1e375b; /* Unified button color */
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #2b4d6f;
+  transform: scale(1.05); /* Subtle hover effect */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   .tour-heading {
-    transition: margin-top 0.3s ease;
-  }
-  
-  .tour-heading.menu-open {
-    margin-top: 90px;
-  }
-  
-  /* Main Tour Package Container */
-  .tour-package {
-    background: linear-gradient(to right, #f7f9fc, #eaf0f5);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    display: flex;
-    align-items: flex-start;
-    padding: 20px 80px;
-    gap: 50px;
-  }
-  
-  .tour-package.reverse {
-    flex-direction: row-reverse; /* For alternating layouts */
-  }
-  
-  /* Heading and Content Styles */
-  .tour-heading {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
+    line-height: 2.5rem;
     text-align: center;
     align-items: center;
-    display: flex;
-    justify-content: center;
-    font-family: monospace;
-    padding: 20px;
-    line-height: 3rem;
-    letter-spacing: -0.05em;
-    word-spacing: 0.3em;
+    padding: 10px;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
-    font-family: "Montserrat", sans-serif;
+    justify-content: center;
+    display: flex;
     width: 100%;
-    height: 40vh;
-  }
-  .tour-heading h1 {
-    color: #ffffff;
+    height: 30vh;
   }
   .delhi-bg-image {
-    background: linear-gradient(rgba(52, 50, 50, 0.4), rgba(42, 42, 41, 0.8)),
-      url("../../assets/Images/LotusTemple.jpg"), url("../../assets/Images/IndiaGate.jpg");
-    background-position: center, left center, right center;
-    background-size: cover, 50% 100%, 50% 100%;
-    background-repeat: no-repeat, no-repeat, no-repeat;
-  }
-  .agra-bg-image {
-    background: linear-gradient(rgba(20, 20, 20, 0.6), rgba(42, 42, 42, 0.8)),
-      url("../../assets/Images/Tajmahal.jpg");
+    background: linear-gradient(rgba(52, 50, 50, 0.4), rgba(42, 42, 41, 0.6)),
+      url(../../assets/Images/IndiaGate.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
   }
-  
-  .tour-package .content {
-    flex: 1.5;
+  .tour-package {
+    flex-direction: column;
+    text-align: center;
+    padding: 8px;
   }
-  
-  .cab-info-table {
-    width: 100%; /* Ensures the table spans the full width of its container */
-    margin-bottom: 20px; /* Adds space below the table */
-    border-collapse: collapse; /* Removes spacing between table cells */
-    font-family: Arial, sans-serif; /* Ensures consistent font styling */
-    font-size: 16px; /* Increases readability */
-  }
-  
-  .cab-info-table th,
-  .cab-info-table td {
-    border: 1px solid #ccc; /* Adds subtle borders for a cleaner look */
-    text-align: center; /* Centers the text */
-    padding: 12px; /* Provides sufficient spacing inside the cells */
-  }
-  
-  .cab-info-table th {
-    background: linear-gradient(
-      90deg,
-      #2a437b,
-      #14213d,
-      #2a437b
-    ); /* Adds a gradient background */
-    color: white; /* White text for better contrast */
-    text-transform: uppercase; /* Makes headers stand out */
-    font-weight: bold; /* Highlights header text */
-  }
-  
-  .cab-info-table tr:nth-child(even) {
-    background-color: #f9f9f9; /* Light background for alternate rows */
-  }
-  
-  .cab-info-table tr:nth-child(odd) {
-    background-color: #ffffff; /* White background for odd rows */
-  }
-  
-  .cab-info-table tr:hover {
-    background-color: #d8deeb; /* Subtle highlight on hover for better user interaction */
-  }
-  
-  .cab-info-table td {
-    word-wrap: break-word; /* Ensures text doesn't overflow the cells */
-  }
-  
-  .cab-info-table caption {
-    caption-side: top; /* Positions the caption above the table */
-    text-align: left; /* Aligns the caption to the left */
-    font-size: 18px; /* Makes the caption more prominent */
-    font-weight: bold; /* Highlights the caption */
-    margin-bottom: 10px; /* Adds spacing between caption and table */
-    color: #333; /* Sets a neutral color for the caption */
+
+  .tour-package.reverse {
+    flex-direction: column;
   }
   .booking-button {
-    padding: 10px 15px;
-    border: none;
-    background-color: #2a437b;
-    color: white;
-    border-radius: 20px;
+    font-size: 15px;
   }
-  
-  /* Add this to your Tour.css file */
+  .tour-package .image-container {
+    margin-top: 20px;
+  }
+
+  .tour-package img {
+    max-width: 100%;
+    height: auto;
+  }
   .slideshow-container {
     position: relative;
     width: 100%;
-    height: 350px; /* Adjust this as needed */
+    height: 250px; /* Adjust this as needed */
     overflow: hidden;
     border-radius: 20px;
+    margin-bottom: 10px;
   }
-  
+
   .slide {
     position: absolute;
     top: 0;
@@ -144,330 +275,252 @@
     opacity: 0;
     transition: opacity 2s ease-in-out; /* Smooth fade transition */
   }
-  
+
   .slide.active {
     opacity: 1;
   }
-  
+
   img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: opacity 1s ease-in-out; /* Make sure the image also has smooth transition */
   }
-  
-  .tour-package .content h2 {
-    font-size: 1.8rem;
-    color: #1e375b; /* Unified color for subheadings */
-    margin-bottom: 10px;
+}
+
+/**/
+/**/
+/**/
+/**/
+/**/
+/**/
+/* Tour Packages Section on home page */
+
+#packages {
+  padding: 50px 20px;
+  background: #f0f0f0;
+  display: flex; /* Use flexbox */
+  flex-direction: column; /* Stack content vertically */
+  align-items: center; /* Center content horizontally */
+}
+
+#packages h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  position: relative;
+  animation: fadeIn 2s ease;
+}
+
+.packages-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+  justify-content: center;
+  padding-bottom: 40px;
+  margin-bottom: 0px;
+}
+
+.package-card {
+  position: relative;
+  background-color: white;
+  border-radius: 10px;
+  overflow: visible;
+  width: 350px;
+  height: 250px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.package-image-container {
+  position: relative;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  overflow: hidden;
+}
+
+.package-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out; /* Smooth transition */
+}
+
+/*Image slodeshow*/
+.slider {
+  position: relative;
+  height: 250px; /* Adjust height as needed */
+  width: 100%;
+}
+
+.package-image.active {
+  opacity: 0.8; /* Show active image */
+}
+
+/* Optional: add a blur effect to the previous image */
+.package-image:not(.active) {
+  filter: blur(2px);
+}
+
+.book-now-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: linear-gradient(45deg, #f87171, #f43f5e);
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.book-now-btn:hover {
+  background: linear-gradient(45deg, #f43f5e, #f87171);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Slightly more shadow on hover */
+  transform: translateY(-2px); /* Subtle lift effect */
+}
+
+.book-now-btn:active {
+  transform: translateY(0); /* Returns to original position on click */
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2); /* Adds pressed effect */
+}
+
+/* Package Info Styling */
+.package-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.9
+  ); /* Slight transparency for the background */
+
+  box-shadow: 0px -10px 20px rgba(0, 0, 0, 0.2); /* Shadow for a floating effect */
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  opacity: 1; /* Always visible */
+  transform: translateY(0); /* Keeps the info visible without sliding out */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 35%;
+  padding: 15px;
+  z-index: 2; /* Ensure it's above the image */
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8); /* Slight opacity for info card */
+}
+
+/* Animation for Info Card */
+.package-info {
+  animation: slideUp 1.5s ease-out infinite alternate;
+}
+
+/* Slide Up animation */
+@keyframes slideUp {
+  0% {
+    transform: translateY(10px);
+    opacity: 0.9;
   }
-  
-  .tour-package .content p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    margin-bottom: 20px;
-    color: #4a5d73; /* Matches homepage text color */
+  100% {
+    transform: translateY(0);
+    opacity: 1;
   }
-  
-  .tour-package .content ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .tour-package .content ul li {
-    font-size: 1.1rem;
-    margin-bottom: 10px;
-    background: #eaf0f5;
-    padding: 10px;
-    text-align: left;
-    border-left: 5px solid #1e375b;
-    border-radius: 5px;
-    color: #4a5d73; /* Consistent text color */
-  }
-  
-  /* Image Styling */
-  .tour-package .image-container {
-    flex: 1;
-  }
-  
-  .tour-package img {
-    width: 100%;
-    height: 400px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  }
-  .timings {
-    display: flex;
-    flex-direction: row;
-    gap: 5px;
-    margin-bottom: 10px;
-  }
-  .timeandlocation-icons {
-    margin-top: 5px;
-  }
-  
-  /* Back Button Styling */
-  .back-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #1e375b; /* Unified button color */
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 20px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-  }
-  
-  .back-button:hover {
-    background-color: #2b4d6f;
-    transform: scale(1.05); /* Subtle hover effect */
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .tour-heading {
-      font-size: 1.1rem;
-      line-height: 2.5rem;
-      text-align: center;
-      align-items: center;
-      padding: 10px;
-      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
-      justify-content: center;
-      display: flex;
-      width: 100%;
-      height: 30vh;
-    }
-    .delhi-bg-image {
-      background: linear-gradient(rgba(52, 50, 50, 0.4), rgba(42, 42, 41, 0.6)),
-        url(../../assets/Images/IndiaGate.jpg);
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat;
-    }
-    .tour-package {
-      flex-direction: column;
-      text-align: center;
-      padding: 8px;
-    }
-  
-    .tour-package.reverse {
-      flex-direction: column;
-    }
-    .booking-button {
-      font-size: 15px;
-    }
-    .tour-package .image-container {
-      margin-top: 20px;
-    }
-  
-    .tour-package img {
-      max-width: 100%;
-      height: auto;
-    }
-    .slideshow-container {
-      position: relative;
-      width: 100%;
-      height: 250px; /* Adjust this as needed */
-      overflow: hidden;
-      border-radius: 20px;
-      margin-bottom: 10px;
-    }
-  
-    .slide {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      opacity: 0;
-      transition: opacity 2s ease-in-out; /* Smooth fade transition */
-    }
-  
-    .slide.active {
-      opacity: 1;
-    }
-  
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: opacity 1s ease-in-out; /* Make sure the image also has smooth transition */
-    }
-  }
-  
-  /**/
-  /**/
-  /**/
-  /**/
-  /**/
-  /**/
-  /* Tour Packages Section on home page */
-  
-  #packages {
-    padding: 50px 20px;
-    background: white;
-    display: flex; /* Use flexbox */
-    flex-direction: column; /* Stack content vertically */
-    align-items: center; /* Center content horizontally */
-  }
-  
-  #packages h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 30px;
-    position: relative;
-    animation: fadeIn 2s ease;
-  }
-  
+}
+
+/* Package Duration */
+.package-duration {
+  color: #f43f5e;
+  font-weight: bold;
+  font-size: 1.2rem;
+
+  transition: color 0.3s ease;
+}
+
+/* Package Name */
+.package-name {
+  font-size: 1.4rem;
+  color: #333;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  transition: transform 0.3s ease;
+}
+
+/* Optional: Stylish Buttons for Better Interaction */
+.book-now-btn {
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.book-now-btn:hover {
+  transform: translateY(-3px);
+}
+
+/* Responsive Design */
+@media (min-width: 751px) and (max-width: 900px) {
   .packages-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
-    justify-content: center;
-    padding-bottom: 40px;
-    margin-bottom: 30px;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    margin-bottom: -30px;
   }
-  
   .package-card {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px 0px;
-    overflow: visible;
-    width: 350px;
-    height: 200px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: relative;
+    width: 100%;
+    margin-bottom: 60px;
   }
-  
-  .package-image-container {
-    position: relative;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    overflow: hidden;
+}
+
+@media (max-width: 750px) {
+  #packages {
+    margin-top: -30px;
+    margin-bottom: -20px;
   }
-  
+  .packages-container {
+    grid-template-columns: 1fr;
+    width: 100%;
+    gap: 45px;
+  }
+  #packages h2 {
+    margin-bottom: 20px;
+    font-size: 1.9rem;
+  }
+
+  .package-card {
+    width: 100%;
+    height: 250px;
+  }
   .package-image {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-    opacity: 0;
-    transition: opacity 1.5s ease-in-out; /* Smooth transition */
+    height: 250px;
   }
-  
-  /*Image slodeshow*/
   .slider {
-    position: relative;
-    height: 200px; /* Adjust height as needed */
+    height: 250px;
     width: 100%;
   }
-  
-  .package-image.active {
-    opacity: 1; /* Show active image */
-  }
-  
-  /* Optional: add a blur effect to the previous image */
-  .package-image:not(.active) {
-    filter: blur(2px);
-  }
-  
-  .book-now-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background-color: orangered;
-    color: white;
-    padding: 8px 12px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .book-now-btn:hover {
-    background-color: #e76941;
-  }
-  
   .package-info {
-    position: absolute;
-    width: 95%;
-    bottom: -25%;
-    left: 8px;
-    right: 0;
-    padding: 10px;
-    text-align: center;
-    background-color: white;
-    box-shadow: 0px 0px 10px 0px;
-    border-radius: 15px;
-    transition: bottom 0.3s ease;
+    text-align: left;
   }
-  
-  .package-duration {
-    color: orangered;
-    font-weight: bold;
-    font-size: 0.9rem;
-    margin-bottom: 2px;
+
+  .package h3 {
+    font-size: 1.1rem; /* Further reduce heading size */
   }
-  
-  .package-name {
-    font-size: 1.25rem;
-    color: #333;
-    margin-bottom: 5px;
+
+  .package p {
+    font-size: 0.85rem; /* Further reduce text size */
   }
-  
-  /* Responsive Design */
-  @media (min-width: 751px) and (max-width: 900px) {
-    .packages-container {
-      grid-template-columns: 1fr 1fr; /* 1 column */
-      width: 100%;
-      margin-bottom: -30px;
-    }
-    .package-card {
-      width: 100%;
-      margin-bottom: 60px;
-    }
-  }
-  
-  @media (max-width: 750px) {
-    #packages {
-      margin-top: -30px;
-      margin-bottom: -20px;
-    }
-    .packages-container {
-      grid-template-columns: 1fr;
-      width: 100%;
-      gap: 65px;
-    }
-    #packages h2 {
-      margin-bottom: 20px;
-      font-size: 1.9rem;
-    }
-  
-    .package-card {
-      width: 100%;
-      height: 230px;
-    }
-    .package-image {
-      height: 230px;
-    }
-    .slider {
-      position: relative;
-      height: 250px;
-      width: 100%;
-    }
-    .package-info {
-      text-align: left;
-      bottom: -50px;
-      width: 60%;
-      left: 0;
-    }
-  
-    .package h3 {
-      font-size: 1.1rem; /* Further reduce heading size */
-    }
-  
-    .package p {
-      font-size: 0.85rem; /* Further reduce text size */
-    }
-  }
+}

@@ -24,7 +24,7 @@ function Header() {
 
   return (
     <div>
-      <div className="bg-[#14213d] flex md:flex-row flex-col justify-between align-middle md:items-center py-2 md:px-4 px-2">
+      <div className="bg-[#272727] flex md:flex-row flex-col justify-between align-middle md:items-center py-2 md:px-4 px-2">
         <p className="text-white md:text-lg">
           Experience India with Royal Hindustan Travels
         </p>
@@ -52,7 +52,7 @@ function Header() {
       </div>
 
       {/*  background: url("https://dynamic.tourtravelworld.com/package-images/photo-big/dir_9/240299/70557.jpg");*/}
-      <div className="py-4">
+      <div className="py-4 bg-[#dedede]">
         <div className="flex gap-6 p-2 items-center justify-between md:px-20">
           <div className="py-2">
             <Link to="/">
@@ -64,7 +64,7 @@ function Header() {
           <div className="hidden md:flex gap-6 items-center">
             {/* Use Link for navigation */}
             <button
-              className="bg-orange-500 text-white px-2 py-1 rounded-3xl md:text-xl md:py-4 md:px-6 md:rounded-full"
+              className="bg-gradient-to-r from-[#f87171] to-[#f43f5e] hover:from-[#f43f5e] hover:to-[#f87171] text-white px-2 py-1 rounded-3xl md:text-xl md:py-4 md:px-6 md:rounded-full"
               onClick={handleExploreClick} // Use handleExploreClick for dynamic navigation
             >
               Explore Our Packages
@@ -82,7 +82,7 @@ function Header() {
           {/* Buttons for Smaller Screens */}
           <div className="md:hidden flex gap-4 items-center">
             <button
-              className="bg-orange-500 text-white px-2 py-1 rounded-3xl"
+              className="bg-gradient-to-r from-[#f87171] to-[#f43f5e] hover:from-[#f43f5e] hover:to-[#f87171] text-white px-2 py-1 rounded-3xl"
               onClick={handleExploreClick} // Use handleExploreClick for dynamic navigation
             >
               Explore Our Packages

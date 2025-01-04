@@ -20,7 +20,9 @@ const AboutPage = () => {
           <About />
         </div>
         <div className="about-images">
-          <h2 className="car-heading">Discover the Range of Cars We Offer</h2>
+          <h2 className="car-heading font-bold text-lg">
+            Discover the Range of Cars We Offer
+          </h2>
           <img src={SwiftDzire} alt="swift" />
           <img src={Innova} alt="Innova" />
           <img src={Ertiga} alt="Ertiga" />

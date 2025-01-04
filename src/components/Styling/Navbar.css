@@ -1,6 +1,6 @@
 /* General Navbar Styles */
 .navbar {
-  background-color: #14213d;
+  background-color: #272727;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -46,7 +46,7 @@ nav {
 }
 
 .navbar a:hover {
-  color: #fc6b11;
+  color: #f87171;
 }
 
 .nav-links div {
@@ -55,9 +55,9 @@ nav {
 
 /* Dropdown Menu */
 .dropdown-toggle {
-  background-color: #14213d;
+  background-color: #272727;
   border: none;
-  color: orangered;
+  color: #ef4444;
   font-size: 1rem;
 }
 
@@ -79,11 +79,11 @@ nav {
   top: 30px;
   left: -5px;
   width: 210px;
-  background-color: #14213d;
+  background-color: #272727;
   flex-direction: column;
   padding: 5px;
   padding-bottom: 10px;
-  border-top: 2px solid orangered;
+  border-top: 2px solid #ef4444;
   border-radius: 5px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
   transform: translateY(-10px);
@@ -109,7 +109,7 @@ nav {
 }
 
 .navbar .dropdown-links a:hover {
-  color: #fc6b11;
+  color: #f87171;
 }
 
 /* Mobile-Specific Styles */
@@ -121,7 +121,7 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    background-color: #14213d;
+    background-color: #272727;
     padding: 0;
     margin: 0;
     width: 100%;
@@ -134,8 +134,8 @@ nav {
 
   .navbar a {
     font-size: 1rem;
-    color: #14213d;
-    border-bottom: 0.5px solid #14213d;
+    color: #272727;
+    border-bottom: 0.5px solid #272727;
     text-align: left;
     width: 100%;
     padding: 10px 35px;
@@ -189,7 +189,7 @@ nav {
     display: flex;
     align-items: left;
     background-color: white;
-    color: #14213d;
+    color: #272727;
   }
 
   .dropdown-heading-menu-container {
@@ -200,7 +200,7 @@ nav {
     padding: 6px;
     box-sizing: border-box;
     background-color: white;
-    border-bottom: 0.5px solid #14213d;
+    border-bottom: 0.5px solid #272727;
   }
 
   .dropdown-heading-menu-container a {
@@ -213,7 +213,7 @@ nav {
   }
 
   .dropdown-toggle-mobile {
-    color: #14213d;
+    color: #272727;
     background: white;
     border: none;
     font-size: 1.5rem;
@@ -222,7 +222,7 @@ nav {
     padding-right: 30px;
     overflow: visible;
     height: 100%;
-    border-left: 0.5px solid #14213d;
+    border-left: 0.5px solid #272727;
   }
 
   /* Dropdown links container */

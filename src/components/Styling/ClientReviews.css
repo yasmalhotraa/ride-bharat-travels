@@ -23,7 +23,7 @@
 }
 
 .star-icon {
-  color: orangered;
+  color: #ffb800;
   margin-right: 4px;
 }
 
@@ -59,7 +59,7 @@
   top: 50%; /* Centering the arrows vertically */
   transform: translateY(-50%); /* Adjust vertical alignment */
   z-index: 1; /* Ensures arrows are on top */
-  background-color: orangered;
+  background-color: #f87171;
   border-radius: 50%;
   width: 30px;
 }

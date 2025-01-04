@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Indiagate from "../../assets/Images/Indiagate2.jpg"
+import Indiagate from "../../assets/Images/Indiagate2.jpg";
 import Lotustemple from "../../assets/Images/LotusTemple.jpg";
 import Qutubminar from "../../assets/Images/Qutubminar.jpg";
 import Redfort from "../../assets/Images/RedFort.jpg";
@@ -7,6 +7,7 @@ import Tajmahal from "../../assets/Images/Tajmahal.jpg";
 import Agrafort from "../../assets/Images/Agra-fort.jpg";
 import Agrammosque from "../../assets/Images/Agra-mosque.jpg";
 import Agrafort2 from "../../assets/Images/Agra_Fort2.jpg";
+import ShineBorder from "../ui/shine-border";
 
 const packages = [
   {
@@ -41,31 +42,32 @@ function TourPackages() {
     <div className="packages-container">
       {packages.map((pkg, index) => (
         <a href={`/${pkg.link}`} className="package-link" key={index}>
-          <div className="package-card">
-            <div className="package-image-container">
-              <div className="slider">
-                {pkg.images.map((image, imgIndex) => (
-                  <img
-                    key={imgIndex}
-                    src={image}
-                    alt={pkg.name}
-                    className={`package-image ${
-                      imgIndex === currentIndex ? "active" : ""
-                    }`}
-                  />
-                ))}
+          <ShineBorder>
+            <div className="package-card">
+              <div className="package-image-container">
+                <div className="slider">
+                  {pkg.images.map((image, imgIndex) => (
+                    <img
+                      key={imgIndex}
+                      src={image}
+                      alt={pkg.name}
+                      className={`package-image ${
+                        imgIndex === currentIndex ? "active" : ""
+                      }`}
+                    />
+                  ))}
+                </div>
+                <button className="book-now-btn">Book Now</button>
+                <div className="package-info shadow">
+                  <p className="package-duration">{pkg.duration}</p>
+                  <h3 className="package-name">{pkg.name}</h3>
+                </div>
               </div>
-              <button className="book-now-btn">Book Now</button>
             </div>
-            <div className="package-info shadow">
-              <p className="package-duration">{pkg.duration}</p>
-              <h3 className="package-name">{pkg.name}</h3>
-            </div>
-          </div>
+          </ShineBorder>
         </a>
       ))}
     </div>
   );
 }
-
 export default TourPackages;

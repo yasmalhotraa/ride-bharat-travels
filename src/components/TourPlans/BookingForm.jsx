@@ -18,6 +18,8 @@ function BookingForm({ packageType }) {
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [cabType, setCabType] = useState("");
   const [cabQuantity, setCabQuantity] = useState(1);
+  const [adults, setAdults] = useState(""); // Default to empty string for placeholder
+  const [children, setChildren] = useState(""); // Default to empty string for placeholder
   const [totalPrice, setTotalPrice] = useState(0);
 
   // Effect hook to calculate the price whenever cabType or cabQuantity changes
@@ -88,46 +90,37 @@ function BookingForm({ packageType }) {
           <div className="no-of-people">
             <div>
               <label htmlFor="adults">[ Above 5+ Age ]</label>
-              <select name="adults" required>
-                <option value="" disabled selected>
-                  No. of Person
+              <select
+                name="adults"
+                value={adults}
+                onChange={(e) => setAdults(e.target.value)}
+                required
+              >
+                <option value="" disabled>
+                  No. of People
                 </option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-                <option value="11">11</option>
-                <option value="12">12</option>
-                <option value="13">13</option>
-                <option value="14">14</option>
-                <option value="15">15</option>
-                <option value="16">16</option>
-                <option value="17">17</option>
-                <option value="18">18</option>
-                <option value="19">19</option>
-                <option value="20">20</option>
+                {[...Array(14).keys()].map((i) => (
+                  <option key={i} value={i + 1}>
+                    {i + 1}
+                  </option>
+                ))}
               </select>
             </div>
             <div>
               <label htmlFor="children">[ Below 5+ Age ]</label>
-              <select name="children">
-                <option value="" disabled selected>
+              <select
+                name="children"
+                value={children}
+                onChange={(e) => setChildren(e.target.value)}
+              >
+                <option value="" disabled>
                   No. of Children
                 </option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
+                {[...Array(9).keys()].map((i) => (
+                  <option key={i} value={i}>
+                    {i}
+                  </option>
+                ))}
               </select>
             </div>
           </div>
@@ -141,7 +134,6 @@ function BookingForm({ packageType }) {
           />
 
           {/* Display Total Price */}
-
           <div className="total-price">
             <p>
               Total Price: ₹{totalPrice || 0} ({cabQuantity} /{" "}

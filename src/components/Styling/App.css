@@ -58,7 +58,7 @@ h3 {
   justify-content: center;
   position: relative;
   width: 100%; /* Full width */
-  height: 450px; /* 20% of page height */
+  height: 300px; /* 20% of page height */
   overflow: hidden;
 }
 

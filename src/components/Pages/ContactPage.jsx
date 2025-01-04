@@ -15,7 +15,7 @@ const ContactPage = () => {
     <div className="contact-section">
       {/* Navbar */}
       <Navbar />
-      <h2 className="contact-header">Contact Us</h2>
+      <h2 className="contact-header font-bold">Contact Us</h2>
       <div className="contact-content">
         <div className="contact-item">
           <a href="mailto:Omsaitravels101174@gmail.com">
