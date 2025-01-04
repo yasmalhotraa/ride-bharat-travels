@@ -87,11 +87,6 @@ function Header() {
             >
               Explore Our Packages
             </button>
-            <button className="bg-red-500 text-white px-2 py-1 rounded-3xl">
-              <Link to="/contact" className="text-white">
-                Contact Us
-              </Link>
-            </button>
           </div>
         </div>
       </div>

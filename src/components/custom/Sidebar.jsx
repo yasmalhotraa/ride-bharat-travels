@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { TbMenuDeep } from "react-icons/tb";
+import { GoSidebarExpand } from "react-icons/go";
 import Innova from "../../assets/Images/Innova.jpeg";
 import Dzire from "../../assets/Images/swift-dzire.jpeg";
 import Ertiga from "../../assets/Images/ertiga.jpeg";
@@ -35,7 +35,7 @@ const Sidebar = () => {
         className="text-4xl text-[#272727] rounded-lg"
         onClick={toggleSidebar}
       >
-        <TbMenuDeep />
+        <GoSidebarExpand />
       </button>
 
       {/* Sidebar */}
