@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { GoSidebarExpand } from "react-icons/go";
+import { CgMenuRightAlt } from "react-icons/cg";
 import Innova from "../../assets/Images/Innova.jpeg";
 import Dzire from "../../assets/Images/swift-dzire.jpeg";
 import Ertiga from "../../assets/Images/ertiga.jpeg";
@@ -32,10 +33,17 @@ const Sidebar = () => {
     <div className="relative">
       {/* Sidebar Toggle Button */}
       <button
-        className="text-4xl text-[#272727] rounded-lg"
+        className="text-4xl text-[#272727] rounded-lg block lg:hidden"
         onClick={toggleSidebar}
       >
         <GoSidebarExpand />
+      </button>
+
+      <button
+        className="text-4xl text-[#272727] rounded-lg hidden lg:block"
+        onClick={toggleSidebar}
+      >
+        <CgMenuRightAlt />
       </button>
 
       {/* Sidebar */}
