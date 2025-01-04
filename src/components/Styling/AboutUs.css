@@ -85,6 +85,9 @@
   .guides-content {
     gap: 1.5rem;
   }
+  .about-item p {
+    text-align: center;
+  }
 }
 
 @media (max-width: 768px) {
@@ -159,5 +162,8 @@
   .about-item,
   .guide-item {
     padding: 1rem;
+  }
+  .about-item p {
+    text-align: center;
   }
 }
