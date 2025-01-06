@@ -59,15 +59,12 @@
 }
 
 .contact-header {
-  background: linear-gradient(#f87171, #ffacac); /* Background image */
-  background-size: cover; /* Ensure the image covers the entire header */
-  background-position: center;
   justify-content: center;
   text-align: center;
   font-size: 2em;
   padding: 20px 30px;
   color: #2c3e50;
-  margin-bottom: 1em;
+  margin-bottom: 10px;
 }
 .contact-header {
   transition: margin-top 0.3s ease;
@@ -82,7 +79,7 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 1.5em;
-  margin-top: 25px;
+  margin-top: 5px;
 }
 
 /* Contact Item (Card) */
