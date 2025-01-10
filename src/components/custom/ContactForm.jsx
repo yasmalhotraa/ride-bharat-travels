@@ -1,116 +1,127 @@
-// src/components/ContactForm.js
-import React, { useState } from "react";
+import { useState } from "react";
 
-function ContactForm() {
-  // Form Data Handler
-  const [formData, setFormData] = useState({
-    name: "",
-    phone: "",
+const ContactForm = () => {
+  const formInitialDetails = {
+    firstName: "",
+    lastName: "",
     email: "",
-    subject: "",
+    phone: "",
     message: "",
-  });
-  const [isSubmitted, setIsSubmitted] = useState(false); // New state for submission status
+  };
+  const [formDetails, setFormDetails] = useState(formInitialDetails);
+  const [buttonText, setButtonText] = useState("Send Message");
+  const [status, setStatus] = useState({});
 
-  const handleSubmit = (e) => {
+  const onFormUpdate = (category, value) => {
+    setFormDetails({
+      ...formDetails,
+      [category]: value,
+    });
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-
-    // Make the POST request to the backend (using the updated endpoint)
-    fetch("http://localhost:5000/send-email", {
-      // Update endpoint here
+    setButtonText("Sending...");
+    let response = await fetch("https://portfolio-kt1d.onrender.com/contact", {
       method: "POST",
       headers: {
-        "Content-Type": "application/json",
+        "Content-Type": "Application/json;charset=utf-8",
       },
-      body: JSON.stringify(formData),
-    })
-      .then((response) => {
-        if (response.ok) {
-          setIsSubmitted(true); // Set submitted status
-        } else {
-          alert("Error sending email.");
-        }
-      })
-      .catch((error) => {
-        console.error("Error:", error);
-        alert("Error sending email.");
+      body: JSON.stringify(formDetails),
+    });
+    setButtonText("Send");
+    let result = await response.json();
+    setFormDetails(formInitialDetails);
+    if (result.code === 200) {
+      setStatus({ success: true, message: "Message sent successfully." });
+    } else {
+      setStatus({
+        success: false,
+        message: "Something went wrong, please try again later.",
       });
+    }
   };
 
   return (
-    <section id="form">
-      {!isSubmitted ? (
-        <form className="contact-form" onSubmit={handleSubmit}>
-          <h2 className="form-heading">Get In Touch</h2>
-
-          <input
-            type="text"
-            placeholder="Enter your Name"
-            name="name"
-            value={formData.name}
-            onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-            required
-          />
-
-          <input
-            type="text"
-            name="email"
-            placeholder="Enter your Email"
-            value={formData.email}
-            onChange={(e) =>
-              setFormData({ ...formData, email: e.target.value })
-            }
-            required
-          />
-
-          <input
-            type="tel"
-            name="phone"
-            placeholder="Phone Number"
-            maxLength="10"
-            pattern="\d{10}"
-            value={formData.phone}
-            onChange={(e) =>
-              setFormData({ ...formData, phone: e.target.value })
-            }
-            required
-          />
-          <input
-            type="text"
-            name="subject"
-            placeholder="Subject"
-            value={formData.subject}
-            onChange={(e) =>
-              setFormData({ ...formData, subject: e.target.value })
-            }
-            required
-          />
-
-          <textarea
-            placeholder="Write a Message"
-            name="message"
-            maxLength="300"
-            rows="4"
-            style={{ resize: "none" }}
-            value={formData.message}
-            onChange={(e) =>
-              setFormData({ ...formData, message: e.target.value })
-            }
-            required
-          ></textarea>
-          <button type="submit">Send Message</button>
-        </form>
-      ) : (
-        <div className="submitted-message">
-          <h2>Form Submitted</h2>
-          <div className="tick-icon">
-            {/* Add tick icon using CSS or an SVG */}
-            <span className="tick">✔️</span>
-          </div>
+    <section id="contact" className="contact-section">
+      <div className="container">
+        <div className="form-wrapper">
+          <div className="form-header"></div>
+          <form onSubmit={handleSubmit} className="contact-form">
+            <h2 className="form-heading">Get In Touch</h2>
+            <div className="form-group">
+              <div className="form-field">
+                <input
+                  type="text"
+                  value={formDetails.firstName}
+                  placeholder="First Name"
+                  required
+                  onChange={(e) => onFormUpdate("firstName", e.target.value)}
+                  className="input-field"
+                />
+              </div>
+              <div className="form-field">
+                <input
+                  type="text"
+                  value={formDetails.lastName}
+                  placeholder="Last Name"
+                  required
+                  onChange={(e) => onFormUpdate("lastName", e.target.value)}
+                  className="input-field"
+                />
+              </div>
+            </div>
+            <div className="form-group">
+              <div className="form-field">
+                <input
+                  type="email"
+                  value={formDetails.email}
+                  placeholder="Email Address"
+                  required
+                  onChange={(e) => onFormUpdate("email", e.target.value)}
+                  className="input-field"
+                />
+              </div>
+              <div className="form-field">
+                <input
+                  type="tel"
+                  value={formDetails.phone}
+                  placeholder="Phone No."
+                  required
+                  maxLength={10}
+                  pattern="[0-9]{10}"
+                  onChange={(e) => onFormUpdate("phone", e.target.value)}
+                  className="input-field"
+                />
+              </div>
+            </div>
+            <div className="form-field">
+              <textarea
+                rows={6}
+                value={formDetails.message}
+                placeholder="Message"
+                required
+                onChange={(e) => onFormUpdate("message", e.target.value)}
+                className="textarea-field"
+              />
+            </div>
+            {status.message && (
+              <p
+                className={`status-message ${
+                  status.success ? "success" : "error"
+                }`}
+              >
+                {status.message}
+              </p>
+            )}
+            <button type="submit" className="submit-button">
+              {buttonText}
+            </button>
+          </form>
         </div>
-      )}
+      </div>
     </section>
   );
-}
+};
 
 export default ContactForm;
