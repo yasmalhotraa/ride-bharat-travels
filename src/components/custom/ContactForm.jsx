@@ -22,13 +22,16 @@ const ContactForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setButtonText("Sending...");
-    let response = await fetch("https://portfolio-kt1d.onrender.com/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "Application/json;charset=utf-8",
-      },
-      body: JSON.stringify(formDetails),
-    });
+    let response = await fetch(
+      "https://exampleBackendContactServer.com/contact",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "Application/json;charset=utf-8",
+        },
+        body: JSON.stringify(formDetails),
+      }
+    );
     setButtonText("Send");
     let result = await response.json();
     setFormDetails(formInitialDetails);
