@@ -66,25 +66,24 @@ h3 {
   display: flex;
   width: 100%;
   height: 100%;
-
-  transition: opacity 0.5s ease-in-out; /* Fade effect for transitions */
+  transition: opacity 0.5s ease-in-out;
 }
 
 .carousel-image {
-  flex: 1; /* Allow images to take equal space */
-  opacity: 0.8; /* Slight opacity for blending */
-  transition: transform 0.5s ease, opacity 0.5s ease; /* Smooth transition */
+  flex: 1;
+  opacity: 0.8;
+  transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
 .carousel-image img {
-  width: 100%; /* Image covers 100% of the container width */
-  height: 100%; /* Image covers 100% of the container height */
-  object-fit: cover; /* Ensure image maintains aspect ratio */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .carousel-image.fade {
-  opacity: 1; /* Full opacity for the visible images */
+  opacity: 1;
 }
 
 .carousel-arrow {
@@ -112,7 +111,7 @@ h3 {
 
 /* Show arrows on hover */
 .carousel-container:hover .carousel-arrow {
-  opacity: 1; /* Arrows visible when hovered */
+  opacity: 1;
 }
 
 /* Contact Section */
@@ -168,33 +167,32 @@ a {
   transform: translateY(-5px);
 }
 .footer-div {
-  display: flex; /* Use flexbox for layout */
-  justify-content: space-between; /* Space between sections */
-  align-items: flex-start; /* Align items at the start */
-  margin-top: 20px; /* Add some space above */
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 20px;
 }
 
 .about-footer-section,
 .contact-info,
 .gallery-section {
   padding: 20px;
-  flex: 1; /* Allow sections to grow equally */
-  margin-right: 10px; /* Add margin for spacing */
+  flex: 1;
+  margin-right: 10px;
 }
 
 .gallery-container {
-  display: flex; /* Use flexbox for the gallery */
-  flex-wrap: wrap; /* Wrap images to new lines if necessary */
-  justify-content: flex-start; /* Center images */
-
-  gap: 10px; /* Space between images */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 10px;
 }
 
 .gallery-container img {
   width: calc(33.33% - 10px);
-  max-width: none; /* Max width for images */
-  height: 80px; /* Maintain aspect ratio */
-  border-radius: 8px; /* Rounded corners */
+  max-width: none;
+  height: 80px;
+  border-radius: 8px;
 }
 
 /*Enlarged gallery Images*/
@@ -208,7 +206,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000; /* Ensure it's on top */
+  z-index: 1000;
 }
 
 .enlarged-image {
@@ -291,8 +289,6 @@ footer p {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Media Queries */
-
 /* For Tablets (Max Width 1024px) */
 @media (max-width: 1024px) {
   /* Footer */
@@ -322,7 +318,7 @@ footer p {
   .footer-div {
     margin-top: 0;
     flex-direction: column;
-    align-items: flex-start; /* Align all content to the left */
+    align-items: flex-start;
     padding: 0px;
   }
 
@@ -330,7 +326,7 @@ footer p {
   .contact-info,
   .gallery-section {
     max-width: 100%;
-    text-align: left; /* Ensure left alignment */
+    text-align: left;
     margin-bottom: 20px;
   }
 
@@ -353,7 +349,7 @@ footer p {
   }
   .footer-div {
     padding-left: 5px;
-    align-items: flex-start; /* Align all content to the left */
+    align-items: flex-start;
     margin-left: -10px;
   }
 
@@ -361,7 +357,7 @@ footer p {
   .contact-info,
   .gallery-section {
     max-width: 100%;
-    text-align: left; /* Ensure left alignment */
+    text-align: left;
     margin-bottom: 0px;
   }
   .about-footer-section h3,
@@ -379,7 +375,7 @@ footer p {
   .about-footer-heading,
   .fade-in,
   .gallery-heading {
-    text-align: left; /* Ensure headings are also left aligned */
+    text-align: left;
   }
 
   /* Gallery Section */

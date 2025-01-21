@@ -49,11 +49,12 @@ const Navbar = () => {
       }`}
     >
       <div className="navbar-heading-menu-container">
-        <a href="/" className="heading-a">
-          {" "}
-          <h1 className="navbar-heading font-bold ">Ride Bharat Travels</h1>
-        </a>
-
+        <div className="w-[200px]">
+          <a href="/" className="heading-a">
+            {" "}
+            <h1 className="navbar-heading font-bold ">Ride Bharat Travels</h1>
+          </a>
+        </div>
         <button className="menu-toggle" onClick={toggleMenu}>
           {!showHeading && <span>Menu</span>}
           <FontAwesomeIcon icon={menuOpen ? faTimes : faBars} />

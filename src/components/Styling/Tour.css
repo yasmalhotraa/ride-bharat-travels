@@ -17,29 +17,26 @@
 }
 
 .tour-package.reverse {
-  flex-direction: row-reverse; /* For alternating layouts */
+  flex-direction: row-reverse;
 }
 
 /* Heading and Content Styles */
-.tour-heading {
-  font-size: 1.3rem;
+.tour-heading h1 {
+  font-size: 2.5rem;
   text-align: center;
   align-items: center;
   display: flex;
   justify-content: center;
-  font-family: monospace;
   padding: 20px;
   line-height: 3rem;
   letter-spacing: -0.05em;
   word-spacing: 0.3em;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
-  font-family: "Montserrat", sans-serif;
   width: 100%;
   height: 40vh;
-}
-.tour-heading h1 {
   color: #ffffff;
 }
+
 .delhi-bg-image {
   background: linear-gradient(rgba(52, 50, 50, 0.4), rgba(42, 42, 41, 0.8)),
     url("../../assets/Images/LotusTemple.jpg"),
@@ -61,69 +58,72 @@
 }
 
 .cab-info-table {
-  width: 100%; /* Ensures the table spans the full width of its container */
-  margin-bottom: 20px; /* Adds space below the table */
-  border-collapse: collapse; /* Removes spacing between table cells */
-  font-family: Arial, sans-serif; /* Ensures consistent font styling */
-  font-size: 16px; /* Increases readability */
+  width: 100%;
+  margin-bottom: 20px;
+  border-collapse: collapse;
+  border-radius: 20px;
+  border-spacing: 0;
+  overflow: hidden;
+  font-size: 16px;
 }
 
 .cab-info-table th,
 .cab-info-table td {
-  border: 1px solid #ccc; /* Adds subtle borders for a cleaner look */
-  text-align: center; /* Centers the text */
-  padding: 12px; /* Provides sufficient spacing inside the cells */
+  text-align: center;
+  padding: 12px;
+}
+.cab-info-table td {
+  border-right: 1px solid #ddd;
 }
 
 .cab-info-table th {
-  background: linear-gradient(
-    90deg,
-    #2a437b,
-    #14213d,
-    #2a437b
-  ); /* Adds a gradient background */
-  color: white; /* White text for better contrast */
-  text-transform: uppercase; /* Makes headers stand out */
-  font-weight: bold; /* Highlights header text */
+  background: linear-gradient(135deg, #272727 0%, #3e3e3e 50%, #4e4e4e 100%);
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 .cab-info-table tr:nth-child(even) {
-  background-color: #f9f9f9; /* Light background for alternate rows */
+  background-color: #f9f9f9;
 }
 
 .cab-info-table tr:nth-child(odd) {
-  background-color: #ffffff; /* White background for odd rows */
+  background-color: #ffffff;
 }
 
 .cab-info-table tr:hover {
-  background-color: #d8deeb; /* Subtle highlight on hover for better user interaction */
+  background-color: #ececec;
 }
 
 .cab-info-table td {
-  word-wrap: break-word; /* Ensures text doesn't overflow the cells */
+  word-wrap: break-word;
 }
 
 .cab-info-table caption {
-  caption-side: top; /* Positions the caption above the table */
-  text-align: left; /* Aligns the caption to the left */
-  font-size: 18px; /* Makes the caption more prominent */
-  font-weight: bold; /* Highlights the caption */
-  margin-bottom: 10px; /* Adds spacing between caption and table */
-  color: #333; /* Sets a neutral color for the caption */
+  caption-side: top;
+  text-align: left;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
 }
 .booking-button {
   padding: 10px 15px;
   border: none;
-  background-color: #2a437b;
-  color: white;
+  background: linear-gradient(145deg, #272727 0%, #474747 40%, #5e5e5e 100%);
+  color: #f87171;
   border-radius: 20px;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.1);
+}
+.booking-button:hover {
+  background: linear-gradient(145deg, #5e5e5e 0%, #474747 60%, #272727 100%);
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Add this to your Tour.css file */
 .slideshow-container {
   position: relative;
   width: 100%;
-  height: 350px; /* Adjust this as needed */
+  height: 350px;
   overflow: hidden;
   border-radius: 20px;
 }
@@ -135,7 +135,7 @@
   width: 100%;
   height: 100%;
   opacity: 0;
-  transition: opacity 2s ease-in-out; /* Smooth fade transition */
+  transition: opacity 2s ease-in-out;
 }
 
 .slide.active {
@@ -146,12 +146,12 @@ img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: opacity 1s ease-in-out; /* Make sure the image also has smooth transition */
+  transition: opacity 1s ease-in-out;
 }
 
 .tour-package .content h2 {
   font-size: 1.8rem;
-  color: #1e375b; /* Unified color for subheadings */
+  color: #1e375b;
   margin-bottom: 10px;
 }
 
@@ -159,7 +159,7 @@ img {
   font-size: 1.1rem;
   line-height: 1.6;
   margin-bottom: 20px;
-  color: #4a5d73; /* Matches homepage text color */
+  color: #4a5d73;
 }
 
 .tour-package .content ul {
@@ -175,7 +175,7 @@ img {
   text-align: left;
   border-left: 5px solid #1e375b;
   border-radius: 5px;
-  color: #4a5d73; /* Consistent text color */
+  color: #4a5d73;
 }
 
 /* Image Styling */
@@ -203,7 +203,7 @@ img {
 .back-button {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #1e375b; /* Unified button color */
+  background-color: #1e375b;
   color: #fff;
   text-decoration: none;
   border-radius: 5px;
@@ -213,13 +213,13 @@ img {
 
 .back-button:hover {
   background-color: #2b4d6f;
-  transform: scale(1.05); /* Subtle hover effect */
+  transform: scale(1.05);
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .tour-heading {
-    font-size: 1.1rem;
+  .tour-heading h1 {
+    font-size: 1.8rem;
     line-height: 2.5rem;
     text-align: center;
     align-items: center;
@@ -260,7 +260,7 @@ img {
   .slideshow-container {
     position: relative;
     width: 100%;
-    height: 250px; /* Adjust this as needed */
+    height: 250px;
     overflow: hidden;
     border-radius: 20px;
     margin-bottom: 10px;
@@ -284,7 +284,7 @@ img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: opacity 1s ease-in-out; /* Make sure the image also has smooth transition */
+    transition: opacity 1s ease-in-out;
   }
 }
 
@@ -299,9 +299,9 @@ img {
 #packages {
   padding: 50px 20px;
   background: #f0f0f0;
-  display: flex; /* Use flexbox */
-  flex-direction: column; /* Stack content vertically */
-  align-items: center; /* Center content horizontally */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #packages h2 {
@@ -349,18 +349,18 @@ img {
   transition: opacity 1.5s ease-in-out; /* Smooth transition */
 }
 
-/*Image slodeshow*/
+/* Image slodeshow */
 .slider {
   position: relative;
-  height: 250px; /* Adjust height as needed */
+  height: 250px;
   width: 100%;
 }
 
 .package-image.active {
-  opacity: 0.8; /* Show active image */
+  opacity: 0.8;
 }
 
-/* Optional: add a blur effect to the previous image */
+/*add a blur effect to the previous image */
 .package-image:not(.active) {
   filter: blur(2px);
 }
@@ -383,13 +383,13 @@ img {
 
 .book-now-btn:hover {
   background: linear-gradient(45deg, #f43f5e, #f87171);
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Slightly more shadow on hover */
-  transform: translateY(-2px); /* Subtle lift effect */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
 }
 
 .book-now-btn:active {
-  transform: translateY(0); /* Returns to original position on click */
-  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2); /* Adds pressed effect */
+  transform: translateY(0);
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2);
 }
 
 /* Package Info Styling */
@@ -399,26 +399,21 @@ img {
   left: 0;
   right: 0;
   padding: 20px;
-  background-color: rgba(
-    255,
-    255,
-    255,
-    0.9
-  ); /* Slight transparency for the background */
+  background-color: rgba(255, 255, 255, 0.9);
 
-  box-shadow: 0px -10px 20px rgba(0, 0, 0, 0.2); /* Shadow for a floating effect */
+  box-shadow: 0px -10px 20px rgba(0, 0, 0, 0.2);
   transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
-  opacity: 1; /* Always visible */
-  transform: translateY(0); /* Keeps the info visible without sliding out */
+  opacity: 1;
+  transform: translateY(0);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 35%;
   padding: 15px;
-  z-index: 2; /* Ensure it's above the image */
+  z-index: 2;
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.8); /* Slight opacity for info card */
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 /* Animation for Info Card */
@@ -517,10 +512,10 @@ img {
   }
 
   .package h3 {
-    font-size: 1.1rem; /* Further reduce heading size */
+    font-size: 1.1rem;
   }
 
   .package p {
-    font-size: 0.85rem; /* Further reduce text size */
+    font-size: 0.85rem;
   }
 }

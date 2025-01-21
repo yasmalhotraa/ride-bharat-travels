@@ -53,7 +53,7 @@ function Header() {
       </div>
 
       {/*  background: url("https://dynamic.tourtravelworld.com/package-images/photo-big/dir_9/240299/70557.jpg");*/}
-      <div className="py-4 bg-[#dedede]">
+      <div className="py-4 bg-white">
         <div className="flex gap-6 p-2 items-center justify-between md:px-20">
           <div className="py-2">
             <Link to="/">
