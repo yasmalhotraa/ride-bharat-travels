@@ -29,9 +29,6 @@ const TourPage = () => {
           </div>
         </section>
       </div>
-
-      {/* Footer component */}
-      <Footer />
     </div>
   );
 };

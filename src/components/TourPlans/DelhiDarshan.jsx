@@ -5,8 +5,8 @@ import "../Styling/Tour.css";
 import BookingForm from "./BookingForm";
 import Footer from "../custom/footer";
 import Navbar from "../custom/Navbar";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faClock, faLocationPin } from "@fortawesome/free-solid-svg-icons";
+import { FaLocationDot } from "react-icons/fa6";
+import { FaClock } from "react-icons/fa";
 import IndiaGate from "../../assets/Images/IndiaGate.jpg";
 import Lotustemple from "../../assets/Images/LotusTemple.jpg";
 import Qutubminar from "../../assets/Images/Qutubminar.jpg";
@@ -34,19 +34,13 @@ function DelhiDarshan() {
         <div className="content">
           <h2>Cab Information</h2>
           <div className="timings">
-            <FontAwesomeIcon
-              className="timeandlocation-icons"
-              icon={faClock}
-            ></FontAwesomeIcon>
+            <FaClock className="timeandlocation-icons" />
             <span className="timeandlocation-text">
               {" "}
               1 Day(08 Hours and 80 Kms)
             </span>
             |
-            <FontAwesomeIcon
-              className="timeandlocation-icons"
-              icon={faLocationPin}
-            ></FontAwesomeIcon>
+            <FaLocationDot className="timeandlocation-icons" />
             <span className="timeandlocation-text">Place: Delhi</span>
           </div>
           <table className="cab-info-table">
@@ -161,9 +155,6 @@ function DelhiDarshan() {
             Back to Home
           </Link>
         </div>
-      </div>
-      <div>
-        <Footer />
       </div>
     </div>
   );

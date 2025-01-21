@@ -24,7 +24,7 @@ const reviews = [
   {
     name: "Mansi Kadam",
     review:
-      "Great experience with Om Sai Travels! The driver was friendly, and the vehicle was clean and comfortable.",
+      "Great experience with Ride Bharat Travels! The driver was friendly, and the vehicle was clean and comfortable.",
     rating: 4,
     profilePhoto: ppf1,
   },
@@ -32,7 +32,7 @@ const reviews = [
     name: "Yogesh Panchal",
     review:
       "Affordable and professional service. Had a fantastic journey and highly recommend them for travels across India.",
-    rating: 4.5, // Set Yogesh’s rating to 4.5
+    rating: 4.5,
     profilePhoto: ppf3,
   },
 ];
@@ -41,7 +41,7 @@ const SamplePrevArrow = (props) => {
   const { onClick } = props;
   return (
     <div className="custom-arrow prev-arrow" onClick={onClick}>
-      &lt; {/* Left Arrow */}
+      &lt;
     </div>
   );
 };
@@ -50,7 +50,7 @@ const SampleNextArrow = (props) => {
   const { onClick } = props;
   return (
     <div className="custom-arrow next-arrow" onClick={onClick}>
-      &gt; {/* Right Arrow */}
+      &gt;
     </div>
   );
 };

@@ -9,6 +9,7 @@ import AgraTour from "./components/TourPlans/AgraTour";
 import ContactPage from "./components/Pages/ContactPage";
 import AboutPage from "./components/Pages/AboutUsPage";
 import TourPage from "./components/Pages/TourPage";
+import Footer from "./components/custom/footer";
 
 // Layout component to include Header
 function Layout() {
@@ -16,6 +17,7 @@ function Layout() {
     <>
       <Header />
       <Outlet /> {/* Dynamically renders the current route */}
+      <Footer />
     </>
   );
 }

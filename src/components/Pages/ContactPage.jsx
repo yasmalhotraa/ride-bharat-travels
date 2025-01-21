@@ -23,7 +23,7 @@ const ContactPage = () => {
               <FontAwesomeIcon icon={faEnvelope} />
             </div>
             <h3>Email</h3>
-            <p>Omsaitravels101174@gmail.com</p>
+            <p>ridebharat@gmail.com</p>
           </a>
         </div>
         <div className="contact-item">
@@ -46,7 +46,7 @@ const ContactPage = () => {
               <FontAwesomeIcon icon={faMapMarkerAlt} />
             </div>
             <h3>Location</h3>
-            <p>Om Sai Travels Office, Paharganj, India</p>
+            <p>Ride Bharat Travels Office, Paharganj, India</p>
           </a>
         </div>
       </div>
@@ -58,16 +58,13 @@ const ContactPage = () => {
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12264.84984906926!2d77.18819599387085!3d28.64238630475234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f35!3m3!1m2!1s0x390cfddcd0a877d3%3A0xc6c090ec2872595c!2sShop%20No%201%2C%20Om%20Sai%20Travels%2C%20B-1%2C%20near%20Udaseen%20Ashram%2C%20Aram%20Bagh%2C%20Paharganj%2C%20Delhi%20110055!5e0!3m2!1sen!2sin!4v1691886367475!5m2!1sen!2sin"
             allowFullScreen=""
             loading="lazy"
-            title="Directions to Om Sai Travels, Paharganj, Delhi"
+            title="Directions to Ride Bharat Travels, Paharganj, Delhi"
           />
         </div>
         <div>
           {/* Add the Contact Form */}
           <ContactForm />
         </div>
-      </div>
-      <div>
-        <Footer />
       </div>
     </div>
   );

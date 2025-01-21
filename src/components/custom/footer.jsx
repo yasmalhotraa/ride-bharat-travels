@@ -64,7 +64,7 @@ const Footer = () => {
         <div className="footer-div">
           <div className="about-footer-section">
             <h3 className="text-white fade-in font-bold relative inline-block">
-              About Royal Hindustan Travels
+              About Ride Bharat Travels
               <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1/2 border-b-2 border-red-400"></span>
             </h3>
             <p>
@@ -87,7 +87,7 @@ const Footer = () => {
               <p>
                 <FontAwesomeIcon icon={faEnvelope} />{" "}
                 <a href="mailto:Omsaitravels101174@gmail.com">
-                  Omsaitravels101174@gmail.com
+                  ridebharat@gmail.com
                 </a>
               </p>
               <p>
@@ -95,8 +95,8 @@ const Footer = () => {
                 <a href="tel:+919250163008">+91 9250163008</a>
               </p>
               <p>
-                <FontAwesomeIcon icon={faMapMarkerAlt} /> Om Sai Travels Office,
-                Paharganj, India
+                <FontAwesomeIcon icon={faMapMarkerAlt} /> Ride Bharat Travels
+                Office, Paharganj, India
               </p>
               <a className="contact-btn  fade-in" href="tel:+919250163008">
                 Call Us Now!
@@ -133,7 +133,8 @@ const Footer = () => {
       </footer>
       <div id="copyright">
         <p className="copyright">
-          Copyright &copy; 2007 - {new Date().getFullYear()} Om Sai Travels.
+          Copyright &copy; 2007 - {new Date().getFullYear()} Ride Bharat
+          Travels.
         </p>
       </div>
     </div>

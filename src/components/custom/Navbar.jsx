@@ -49,9 +49,10 @@ const Navbar = () => {
       }`}
     >
       <div className="navbar-heading-menu-container">
-        <h1 className="navbar-heading font-bold ms-2">
-          Royal Hindustan Travels
-        </h1>
+        <a href="/" className="heading-a">
+          {" "}
+          <h1 className="navbar-heading font-bold ">Ride Bharat Travels</h1>
+        </a>
 
         <button className="menu-toggle" onClick={toggleMenu}>
           {!showHeading && <span>Menu</span>}

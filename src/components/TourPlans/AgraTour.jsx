@@ -146,9 +146,6 @@ function AgraTour() {
           </Link>
         </div>
       </div>
-      <div>
-        <Footer />
-      </div>
     </div>
   );
 }

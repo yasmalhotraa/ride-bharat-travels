@@ -12,22 +12,22 @@ import {
 const About = () => {
   return (
     <section id="about" className="about-section bg-red">
-      <h2 className="font-bold">About Royal Hindustan Travels</h2>
+      <h2 className="font-bold">About Ride Bharat Travels</h2>
       <p className="paragraph">
-        Established with a passion for travel and customer satisfaction, Royal
-        Hindustan Travels has been a trusted name in the travel industry for
-        years. We pride ourselves on offering a wide range of services, from
-        convenient taxi rentals and comfortable tempo travelers to expertly
-        curated tour packages that cover the diverse landscapes of India. Our
-        fleet is meticulously maintained to ensure both safety and comfort for
-        our passengers.
+        Established with a passion for travel and customer satisfaction, Ride
+        Bharat Travels has been a trusted name in the travel industry for years.
+        We pride ourselves on offering a wide range of services, from convenient
+        taxi rentals and comfortable tempo travelers to expertly curated tour
+        packages that cover the diverse landscapes of India. Our fleet is
+        meticulously maintained to ensure both safety and comfort for our
+        passengers.
         <br />
         <br />
         Our commitment to excellence extends to our team of highly trained
         drivers and knowledgeable tour guides who are dedicated to creating a
-        memorable travel experience for each of our clients. With Royal
-        Hindustan Travels, you’re not just a passenger; you’re part of a journey
-        that values comfort, safety, and discovery at every step.
+        memorable travel experience for each of our clients. With Ride Bharat
+        Travels, you’re not just a passenger; you’re part of a journey that
+        values comfort, safety, and discovery at every step.
       </p>
 
       <div className="about-content">

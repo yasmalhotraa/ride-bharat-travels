@@ -29,8 +29,6 @@ const AboutPage = () => {
           <img src={Tampo} alt="Tampo" />
         </div>
       </div>
-      {/* Footer Component */}
-      <Footer />
     </div>
   );
 };

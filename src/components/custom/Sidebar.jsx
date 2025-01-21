@@ -102,7 +102,7 @@ const Sidebar = () => {
                   <p>
                     <FontAwesomeIcon icon={faEnvelope} />{" "}
                     <a href="mailto:Omsaitravels101174@gmail.com">
-                      Omsaitravels101174@gmail.com
+                      ridebharat@gmail.com
                     </a>
                   </p>
                   <p>
@@ -111,7 +111,7 @@ const Sidebar = () => {
                   </p>
                 </div>
                 <p className="mb-4">
-                  <FontAwesomeIcon icon={faMapMarkerAlt} /> Om Sai Travels
+                  <FontAwesomeIcon icon={faMapMarkerAlt} /> Ride Bharat Travels
                   Office, Paharganj, India
                 </p>
                 <a

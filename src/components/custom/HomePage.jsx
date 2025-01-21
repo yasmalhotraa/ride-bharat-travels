@@ -46,9 +46,6 @@ const HomePage = () => {
         <section id="client-reviews">
           <ClientReviews />
         </section>
-
-        {/* Footer component */}
-        <Footer />
       </div>
     </div>
   );
