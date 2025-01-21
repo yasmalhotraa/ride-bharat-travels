@@ -16,7 +16,6 @@ function Layout() {
   return (
     <>
       <Header />
-      <p>yash malhotra</p>
       <Outlet /> {/* Dynamically renders the current route */}
       <Footer />
     </>
