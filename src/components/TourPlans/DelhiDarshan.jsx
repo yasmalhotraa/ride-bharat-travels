@@ -13,6 +13,39 @@ import Qutubminar from "../../assets/Images/Qutubminar.jpg";
 import Redfort from "../../assets/Images/RedFort.jpg";
 
 const images = [IndiaGate, Lotustemple, Qutubminar, Redfort];
+const placesCovered = [
+  { id: 1, name: "Red Fort" },
+  { id: 2, name: "Rajghat" },
+  { id: 3, name: "India Gate" },
+  { id: 4, name: "Shakti Sthal" },
+  { id: 5, name: "Rashtrapati Bhawan" },
+  { id: 6, name: "Indira Gandhi Museum" },
+  { id: 7, name: "Qutub Minar" },
+  { id: 8, name: "Delhi Hatt" },
+  { id: 9, name: "Bangla Sahib Gurudwara" },
+  { id: 10, name: "Birla Temple" },
+];
+const highlights = [
+  {
+    id: 1,
+    description:
+      "Discover the grandeur of India Gate and the historical Qutub Minar.",
+  },
+  {
+    id: 2,
+    description:
+      "Admire the architectural elegance of the Lotus Temple and Red Fort.",
+  },
+  {
+    id: 3,
+    description:
+      "Immerse yourself in the vibrant culture of Old Delhi's bustling streets.",
+  },
+  {
+    id: 4,
+    description: "Capture memorable moments at Delhi's most iconic landmarks.",
+  },
+];
 
 function DelhiDarshan() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -100,52 +133,17 @@ function DelhiDarshan() {
 
           <h2>Places Covered</h2>
           <ul>
-            <li>
-              <strong>1.</strong> Red Fort
-            </li>
-            <li>
-              <strong>2.</strong> Rajghat
-            </li>
-            <li>
-              <strong>3.</strong>India Gate
-            </li>
-            <li>
-              <strong>4.</strong> Shakti Sthal
-            </li>
-            <li>
-              <strong>5.</strong> Rashtrapati Bhawan
-            </li>
-            <li>
-              <strong>6.</strong> Indira Gandhi Museum
-            </li>
-            <li>
-              <strong>7.</strong>Qutub Minar
-            </li>
-            <li>
-              <strong>8.</strong>Delhi Hatt
-            </li>
-            <li>
-              <strong>9.</strong>Bangla Sahib Gurudwara
-            </li>
-            <li>
-              <strong>10.</strong>Birla Temple
-            </li>
+            {placesCovered.map((place) => (
+              <li key={place.id}>
+                <strong>{place.id}</strong> {place.name}
+              </li>
+            ))}
           </ul>
           <h2>Highlights</h2>
           <ul>
-            <li>
-              Discover the grandeur of India Gate and the historical Qutub
-              Minar.
-            </li>
-            <li>
-              Admire the architectural elegance of the Lotus Temple and Red
-              Fort.
-            </li>
-            <li>
-              Immerse yourself in the vibrant culture of Old Delhi's bustling
-              streets.
-            </li>
-            <li>Capture memorable moments at Delhi's most iconic landmarks.</li>
+            {highlights.map((desc) => (
+              <li key={desc.id}>{desc.description}</li>
+            ))}
           </ul>
         </div>
         <div id="bookingform" className="image-container section">

@@ -1,5 +1,6 @@
 import React from "react";
 import Sidebar from "./Sidebar";
+import logo from "../../assets/Images/logo.png";
 import { FaInstagram } from "react-icons/fa";
 import { IoLogoFacebook } from "react-icons/io5";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -53,11 +54,11 @@ function Header() {
       </div>
 
       {/*  background: url("https://dynamic.tourtravelworld.com/package-images/photo-big/dir_9/240299/70557.jpg");*/}
-      <div className="py-4 bg-white">
+      <div className="bg-white">
         <div className="flex gap-6 p-2 items-center justify-between md:px-20">
           <div className="py-2">
             <Link to="/">
-              <h1 className="text-3xl">LOGO</h1>
+              <img src={logo} alt="logo" className="w-[100px] h-[100px] p-0" />
             </Link>
           </div>
 

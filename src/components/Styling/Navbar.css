@@ -190,7 +190,7 @@ nav {
   .dropdown-mobile {
     width: 100%;
     flex-direction: column;
-    display: flex;
+
     align-items: left;
     background-color: white;
     color: #272727;
@@ -212,6 +212,8 @@ nav {
     padding: 0;
     padding-left: 28px;
     margin: 0;
+    display: flex;
+    align-items: center;
     padding-top: 3px;
     padding-bottom: 3px;
   }

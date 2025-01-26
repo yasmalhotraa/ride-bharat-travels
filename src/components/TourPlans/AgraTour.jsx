@@ -13,6 +13,34 @@ import AgraMosque from "../../assets/Images/Agra-mosque.jpg";
 import AgraFort2 from "../../assets/Images/Agra_Fort2.jpg";
 
 const images = [TajMahal, AgraFort, AgraFort2, AgraMosque];
+const placesCovered = [
+  { id: 1, name: "Taj Mahal" },
+  { id: 2, name: "Agra Fort" },
+  { id: 3, name: "Krishna Janmabhoomi Temple [Mathura]" },
+  { id: 4, name: "Prem Mandir and Nidhi Van [Vrindavan]" },
+];
+const highlights = [
+  {
+    id: 1,
+    description:
+      "Witness the awe-inspiring Taj Mahal, one of the Seven Wonders of the World.",
+  },
+  {
+    id: 2,
+    description:
+      "Explore the majestic Agra Fort, a UNESCO World Heritage Site.",
+  },
+  {
+    id: 3,
+    description:
+      "Visit the sacred Krishna Janmabhoomi Temple, the birthplace of Lord Krishna.",
+  },
+  {
+    id: 4,
+    description:
+      "Admire the beauty of Prem Mandir, known for its stunning architecture and carvings.",
+  },
+];
 
 function AgraTour() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -106,36 +134,19 @@ function AgraTour() {
 
           <h2>Places Covered</h2>
           <ul>
-            <li>
-              <strong>1.</strong> Taj Mahal
-            </li>
-            <li>
-              <strong>2.</strong> Agra Fort
-            </li>
-            <li>
-              <strong>3.</strong> Krishna Janmabhoomi Temple [ Mathura ]
-            </li>
-            <li>
-              <strong>4.</strong> Prem Mandir and Nidhi Van [Vrindavan]
-            </li>
+            <ul>
+              {placesCovered.map((place) => (
+                <li key={place.id}>
+                  <strong>{place.id}</strong> {place.name}
+                </li>
+              ))}
+            </ul>
           </ul>
           <h2>Highlights</h2>
           <ul>
-            <li>
-              Witness the awe-inspiring Taj Mahal, one of the Seven Wonders of
-              the World.
-            </li>
-            <li>
-              Explore the majestic Agra Fort, a UNESCO World Heritage Site.
-            </li>
-            <li>
-              Visit the sacred Krishna Janmabhoomi Temple, the birthplace of
-              Lord Krishna.
-            </li>
-            <li>
-              Admire the beauty of Prem Mandir, known for its stunning
-              architecture and carvings.
-            </li>
+            {highlights.map((desc) => (
+              <li key={desc.id}>{desc.description}</li>
+            ))}
           </ul>
         </div>
         <div id="bookingform" className="image-container section">
