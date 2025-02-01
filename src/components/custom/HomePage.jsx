@@ -1,12 +1,9 @@
 import React from "react";
 import TourPackages from "./TourPackages";
 import About from "./About";
-import ClientReviews from "./ClientReviews";
 import ImageCarousel from "./ImageCarousel";
 import Navbar from "./Navbar"; // Import Navbar component
-import Footer from "./footer"; // Import the Footer component
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
+import ClientReviewsCarousel from "./ClientReviewsCarousel";
 
 const HomePage = () => {
   return (
@@ -44,7 +41,7 @@ const HomePage = () => {
         </section>
 
         <section id="client-reviews">
-          <ClientReviews />
+          <ClientReviewsCarousel />
         </section>
       </div>
     </div>
