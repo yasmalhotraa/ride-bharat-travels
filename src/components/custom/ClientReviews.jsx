@@ -17,7 +17,7 @@ const reviews = [
   {
     name: "Rohit Puri",
     review:
-      "Om Sai Travels provided an incredible experience! The vehicle was comfortable, and the driver was very professional.",
+      "Ride Bharat Travels provided an incredible experience! The vehicle was comfortable, and the driver was very professional.",
     rating: 5,
     profilePhoto: ppf2,
   },
